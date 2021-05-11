@@ -1,0 +1,61 @@
+package javaapplication50;
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
+
+public class ShowCircle extends Application {
+
+    @Override
+    public void start(Stage primaryStage) {
+        Rectangle first = new Rectangle();
+        first.setHeight(110);
+        first.setWidth(220);
+        first.setArcHeight(25);
+        first.setArcWidth(25);
+        first.setStroke(Color.BLACK);
+        first.setFill(Color.WHITE);
+
+        Rectangle second = new Rectangle();
+        second.setHeight(100);
+        second.setWidth(210);
+        second.setArcHeight(30);
+        second.setArcWidth(30);
+        second.setStroke(Color.BLACK);
+        second.setFill(Color.WHITE);
+        Rectangle third = new Rectangle();
+        third.setHeight(90);
+        third.setWidth(200);
+        third.setArcHeight(35);
+        third.setArcWidth(35);
+        third.setStroke(Color.BLACK);
+        third.setFill(Color.WHITE);
+        Rectangle fourth = new Rectangle();
+        fourth.setHeight(80);
+        fourth.setWidth(190);
+        fourth.setArcHeight(40);
+        fourth.setArcWidth(40);
+        fourth.setStroke(Color.BLACK);
+        fourth.setFill(Color.WHITE);
+        Pane pane = new Pane();
+        {
+            pane.getChildren().add(first);
+            pane.getChildren().add(second);
+            pane.getChildren().add(third);
+            pane.getChildren().add(fourth);
+
+            Scene scene = new Scene(pane, 500, 300);
+            primaryStage.setTitle("Result");
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        }
+
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
