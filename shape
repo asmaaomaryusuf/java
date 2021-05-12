@@ -1,4 +1,4 @@
-package javaapplication50;
+package javaapplication35;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -7,11 +7,14 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
-public class ShowCircle extends Application {
+public class ShowRectangle extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+  
         Rectangle first = new Rectangle();
+        first.setX(150.0f);
+        first.setY(75.0f);
         first.setHeight(110);
         first.setWidth(220);
         first.setArcHeight(25);
@@ -20,6 +23,8 @@ public class ShowCircle extends Application {
         first.setFill(Color.WHITE);
 
         Rectangle second = new Rectangle();
+        second.setX(155.0f);
+        second.setY(80.0f);
         second.setHeight(100);
         second.setWidth(210);
         second.setArcHeight(30);
@@ -27,6 +32,8 @@ public class ShowCircle extends Application {
         second.setStroke(Color.BLACK);
         second.setFill(Color.WHITE);
         Rectangle third = new Rectangle();
+        third.setX(160.0f);
+        third.setY(85.0f);
         third.setHeight(90);
         third.setWidth(200);
         third.setArcHeight(35);
@@ -34,6 +41,8 @@ public class ShowCircle extends Application {
         third.setStroke(Color.BLACK);
         third.setFill(Color.WHITE);
         Rectangle fourth = new Rectangle();
+        fourth.setX(165.0f);
+        fourth.setY(90.0f);
         fourth.setHeight(80);
         fourth.setWidth(190);
         fourth.setArcHeight(40);
@@ -47,7 +56,9 @@ public class ShowCircle extends Application {
             pane.getChildren().add(third);
             pane.getChildren().add(fourth);
 
-            Scene scene = new Scene(pane, 500, 300);
+            
+            
+      Scene scene = new Scene(pane, 500, 300);
             primaryStage.setTitle("Result");
             primaryStage.setScene(scene);
             primaryStage.show();
