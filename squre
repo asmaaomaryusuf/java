@@ -1,0 +1,60 @@
+package javaapplication35;
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
+
+public class Squres extends Application {
+
+    @Override
+    public void start(Stage primaryStage) {
+        Rectangle first = new Rectangle();
+        first.setX(150.0f);
+        first.setY(150.0f);
+        first.setHeight(100);
+        first.setWidth(100);
+        first.setStroke(Color.RED);
+        first.setFill(Color.RED);
+        Rectangle second = new Rectangle();
+        second.setX(250.0f);
+        second.setY(250.0f);
+        second.setHeight(100);
+        second.setWidth(100);
+        second.setStroke(Color.GREEN);
+        second.setFill(Color.GREEN);
+        Rectangle third = new Rectangle();
+        third.setX(150.0f);
+        third.setY(250.0f);
+        third.setHeight(100);
+        third.setWidth(100);
+        third.setStroke(Color.YELLOW);
+        third.setFill(Color.YELLOW);
+        Rectangle fourth = new Rectangle();
+        fourth.setX(250.0f);
+        fourth.setY(150.0f);
+        fourth.setHeight(100);
+        fourth.setWidth(100);
+        fourth.setStroke(Color.BLUE);
+        fourth.setFill(Color.BLUE);
+        Pane pane = new Pane();
+        {
+            pane.getChildren().add(first);
+            pane.getChildren().add(second);
+            pane.getChildren().add(third);
+            pane.getChildren().add(fourth);
+
+            Scene scene = new Scene(pane, 500, 500);
+            primaryStage.setTitle("result");
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        }
+
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
